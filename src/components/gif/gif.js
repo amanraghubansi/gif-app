@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { runInThisContext } from 'vm';
+import "./gif.scss";
 
 class GifImage extends Component {
     state={
@@ -11,10 +11,13 @@ class GifImage extends Component {
     };
     render() { 
         return (
-            <div>
-                <button onClick= {this.clickHandler}> {this.state.isStill ? 'Play' : 'Pause'}</button>
+            <div className="inline-block gif-container">
+                {/* <button className="control-btn" onClick= {this.clickHandler}> {this.state.isStill ? 'Play' : 'Pause'}</button> */}
+                <div class="icon control-btn" onClick= {this.clickHandler}>
+                    <div className={this.state.isStill ? "playicon" : "pauseicon"}></div>
+                </div>
                 <img onClick= {this.clickHandler} src={this.state.isStill ? this.props.still : this.props.moving} alt={this.props.still}/>
-                
+                <div className="backdrop"></div>
             </div>
         );
     }

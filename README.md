@@ -4,7 +4,7 @@ engineers search for the best GIFs around internetown by building GIFted. A fast
 You're free to fancy React, Vue, Svelte or any other well-known web framework. If you prefer your web apps vanilla (JS) flavoured, well, we'll still judge! 😉
 GIFted should let users:
 * search GIFs via keyword(s)
-*  show matching GIFs in a space optimized grid
+* show matching GIFs in a space optimized grid
 * play/pause GIFs
 Make sure:
 * the app is fast & the UX like hot knife on butter

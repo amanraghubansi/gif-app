@@ -1,0 +1,52 @@
+.gif-container{
+    position: relative;
+    .control-btn{
+        opacity: 0;
+        position : absolute;    
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .backdrop{
+        opacity: 0;
+        background: rgba($color: #000000, $alpha: 0.5);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+    &:hover{
+        .control-btn{
+            opacity: 1;
+            z-index: 10;
+        }
+        .backdrop{
+            opacity: 1;
+        }    
+    }
+
+    .icon{
+        width: 60px;
+        height: 60px;
+        border-radius: 200px;
+        .playicon{
+            position:absolute;
+            margin-top:13px;
+            margin-left:16px;
+            border-left:35px solid #fff;
+            border-right:18px dashed transparent;
+            border-top:18px dashed transparent;
+            border-bottom:18px dashed transparent;
+        }
+    
+        .pauseicon{
+            position: absolute;
+            margin-top: 13px;
+            margin-left: 12px;
+            border-left: 13px solid #fff;
+            border-right: 13px solid #fff;
+            height: 35px;
+            padding: 5px;
+        }
+    }    
+}
