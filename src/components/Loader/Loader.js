@@ -2,7 +2,7 @@ import React from 'react';
 import  "./Loader.scss"
 const Loader = () => {
     return ( 
-        <div className="loader">Loading...</div>
+        <div class="loading">Loading&#8230;</div>
     );
 }
  

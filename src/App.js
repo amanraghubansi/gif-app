@@ -7,6 +7,7 @@ import ImageList from './components/ImageList/ImageList';
 import './App.css';
 import Loader from './components/Loader/Loader';
 import debounce from './utility';
+import Pagination from './components/Pagination/Pagination';
 
 class App extends Component {
 
@@ -85,15 +86,27 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        { this.state.isLoading ? <Loader /> : ''}
+        { this.state.isLoading ? <Loader /> : ''}  
         <header className="App-header">
-          <p>
-            Search GIF
-          </p>
+          <a className="logo">GIF App</a>
+          <DeboucedInput userInput={this.state.userInput} changeHandler={this.inputChangeHandler} label="Search gifs" />
         </header>
+        {
+
+        }
         <div className='container'>
-          <DeboucedInput userInput={this.state.userInput} changeHandler={this.inputChangeHandler} label="Search" />
-          <ImageList images={this.state.imagesArr} totalCount={this.state.totalCount} />
+          {
+            this.state.imagesArr.length 
+            ? 
+            <React.Fragment>
+              <Pagination totalCount={this.state.totalCount} displayCount={this.state.imagesArr.length}/>
+              <ImageList images={this.state.imagesArr} totalCount={this.state.totalCount} />
+            </React.Fragment>
+            :
+            <div className="align-center">
+              <img src="./images/walking.gif" />
+            </div>
+          }
         </div>
       </div>
     );

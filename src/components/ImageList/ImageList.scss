@@ -1,6 +1,7 @@
-// .image-wrapper{
-//     border: 1px solid black;
-// }
+.image-wrapper{
+    width: 100%;
+    margin: 10px 5px;
+}
 
 .row {
     display: -ms-flexbox; /* IE10 */
@@ -19,8 +20,8 @@
   }
   
   .column img {
-    margin-top: 8px;
     vertical-align: middle;
+    width: 100%;
   }
   
   /* Responsive layout - makes a two column-layout instead of four columns */

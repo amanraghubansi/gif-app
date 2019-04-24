@@ -43,7 +43,7 @@
         }
         &:focus + span {
             color: #07f;
-            transform: translateY(-26px) scale(0.75);
+            transform: translateY(-32px) scale(0.80);
         }
         &:focus + span + .border {
             transform: scaleX(1);
@@ -53,7 +53,7 @@
         }
         &:not(:placeholder-shown) + span {
             color: #5a667f;
-            transform: translateY(-26px) scale(0.75);
+            transform: translateY(-32px) scale(0.80);
         }
     }
 }

@@ -46,7 +46,6 @@ class ImageList extends Component {
                         )
                     })
                 }
-                <Pagination totalCount={this.props.totalCount} displayCount={this.props.images.length}/>
             </div>
          );
     }
